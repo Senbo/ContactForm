@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<title>Formatka kontaktowa</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="media/css/reset.css" rel="stylesheet" type="text/css">
+		<link href="media/css/style.css" rel="stylesheet" type="text/css">
+		<script src="media/js/jquery/jquery-1.11.3.min.js"></script>
+		<script src="media/js/jquery/jquery.validate.min.js"></script>
+		<script src="media/js/script.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div id="contactForm">
+				<header>
+					<div class="before">Skontaktuj się z agentem</div>
+					<div class="after">Wiadomość wysłana z sukcesem!</div>
+				</header>
+				<section class="formWrapper">
+					<form id="form" name="form">
+						<textarea id="textarea" name="textarea">Dzień dobry, Jestem zainteresowany współpracą z Panem.&#010;Proszę o kontakt.</textarea>
+						<div class="positioner">
+							<input type="text" id="name" name="name" class="required" placeholder="Twoje imię" />
+							<img src="media/img/name.png" />
+						</div>
+						<div class="positioner">
+							<input type="text" id="phone" name="phone" class="required digits" placeholder="Twój numer telefonu" />
+							<img src="media/img/phone.png" />
+						</div>
+						<div class="positioner">
+							<input type="text" id="mail" name="mail" class="required email" placeholder="Twój adres e-mail" />
+							<img src="media/img/mail.png" />
+						</div>
+						<div>
+							<input type="checkbox" id="approve" class="required" name="approve" />
+							<label for="approve" class="approve"><span></span></label>
+							<div class="rules">
+								Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <a href="#">regulaminem</a>.
+							</div>
+						</div>
+						<div class="submitBtn no-selection">
+							<!-- <input type="submit" class="submit" value="Wyślij wiadomość" /> -->
+							<img class="loader" src="media/img/loader.gif" />
+							<div class="submit">
+								<div class="no-selection">Wyślij wiadomość</div>
+							</div>
+						</div>
+						<div class="note">
+							*Agent deklaruje, że odpowie w ciągu <span>2 godzin</span>.
+						</div>
+					</form>
+					<div class="confirmation">
+						<img src="media/img/done.png"/>
+						<span class="textConfirm">
+							<span>Wiadomość została</span>
+							<span>wysłana</span>
+						</span>
+						<span class="agent">
+							<span>Agent <a href="#">Sławomir Brzęczyszczykiewicz</a></span>
+							<span>odpowie na Twoje pytanie</span>
+							<span>w ciągu <span>2 godzin</span>.</span>
+						</span>
+					</div>
+				</section>
+				<div class="info more">
+					Administratorem danych osobowych jest Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras semper, enim ac venenatis efficitur, nisi.
+				</div>
+				<section class="phoneWrapper">
+					<div class="phoneNumber">
+						<img src="media/img/receiver.png" />
+						<span>Numer telefonu<span>
+					</div>
+					<div class="phoneNumberShow">
+						<span class="number">+48 600 540 600</span>
+						<span class="button">
+							<span>Zobacz numer telefonu</span>
+						</span>
+					</div>
+				</section>
+			</div>
+		</div>
+	</body>
+</html>

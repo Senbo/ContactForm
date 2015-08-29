@@ -1,0 +1,471 @@
+/*1ps header brakuje, brak czcionki, kolor czcionki na jeden odcien, poprawiony regulamin*/
+
+/*@font-face {
+	font-family: 'Encode Sans Regular'; src: url('../fonts/EncodeSans-Regular.ttf');
+	font-family: 'Encode Sans Regular'; font-weight: 300; src: url('../fonts/EncodeSans-Light.ttf')
+ }
+
+body, input {
+	font-family: 'Encode Sans Regular';
+}*/
+
+body {
+	color: #191818;
+}
+
+.container {
+	background: url(../img/background.png);
+	height: 770px;
+	width: 800px;
+}
+
+#contactForm {
+	margin: 0 auto;
+	padding-top: 54px;
+	width: 300px;
+}
+
+.no-selection::selection {
+	background: transparent;
+}
+.no-selection::-moz-selection {
+	background: transparent;
+}
+
+/* HEADER */
+
+#contactForm header {
+	background: url(../img/header.png) no-repeat;
+	background-size: cover;
+	display: table;
+	height: 60px;
+	margin-bottom: 2px;
+	text-align: center;
+	width: 300px;
+}
+
+#contactForm header div {
+	color: #fff;
+	display: table-cell;
+	font-size: 18px;
+	font-weight: 300;
+	vertical-align: middle;
+}
+
+#contactForm header .after {
+	display: none;
+}
+
+/* END HEADER */
+
+/* FORM */
+
+#contactForm .formWrapper {
+	background-color: #fff;
+	min-height: 426px;
+}
+
+#contactForm #form {
+	background-color: #fff;
+	padding: 10px;
+	position: relative;
+	margin-bottom: 2px;
+}
+
+#contactForm #form #name,
+#contactForm #form #mail {
+	margin-top: -1px;
+}
+
+#contactForm #form .positioner:nth-child(4) {
+	margin-bottom: 21px;
+}
+
+#contactForm #form div:nth-child(5) {
+	display: block;
+	margin-bottom: 23px;
+}
+
+#contactForm #form .rules {
+	display: inline-block;
+	font-size: 12px;
+	line-height: 15px;
+	margin: -2px 0 0 8px;
+	position: absolute;
+}
+
+#contactForm #form .rules a {
+	color: #0097DF;
+	cursor: pointer;
+	position: relative;
+	text-decoration: none;
+}
+
+#contactForm #form .rules a:before {
+	background-color: #0097DF;
+	bottom: 1px;
+	content: "";
+	height: 1px;
+	position: absolute;
+	visibility: hidden;
+	width: 100%;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.1s ease-in-out 0s;
+	transition: all 0.1s ease-in-out 0s;
+}
+
+#contactForm #form .rules a:hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
+#contactForm #form .positioner {
+	display: block;
+	margin-top: -1px;
+	position: relative;
+}
+
+#contactForm #form #textarea + .positioner {
+	margin-bottom: 21px;
+}
+
+#contactForm #form .positioner img {
+	display: block;
+	height: 24px;
+	left: 7px;
+	opacity: 0.1;
+	position: absolute;
+	top: 9px;
+	width: 22px;
+	z-index: 1;
+}
+
+#contactForm #form #phone ~ img {
+	top: 10px;
+}
+
+#contactForm #form .submit {
+	background-color: #73c947;
+	border: 0 none;
+	border-bottom: 1px solid #339999;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-family: initial;
+	font-size: 14px;
+	height: 44px;
+	text-align: center;
+	width: 100%;
+	box-shadow: 0 1px 1px -1px #606060;
+	-moz-box-shadow: 0 1px 1px -1px #606060;
+    -webkit-box-shadow: 0 1px 1px -1px #606060;
+}
+
+#contactForm #form .submit:hover {
+	background-color: #69c139;
+}
+
+#contactForm #form .submit div {
+	padding-top: 15px;
+}
+
+#contactForm #form .submitBtn {
+	display: block;
+	margin-bottom: 5px;
+	position: relative;
+}
+
+#contactForm #form .submitBtn .loader{
+	display: none;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+#contactForm #form .note {
+	display: block;
+	font-size: 12px;
+	margin: 0 0 3px 11px;
+}
+
+#contactForm #form .note span {
+	text-decoration: underline;
+}
+
+#contactForm .info {
+	background-color: #fff;
+	font-size: 10px;
+	margin-bottom: 20px;
+	padding: 11px 10px 9px 10px;
+	text-align: center;
+}
+
+#contactForm .info .morecontent span {
+    display: none;
+}
+
+#contactForm .info .morelink {
+	color: #0097DF;
+    text-decoration: none;
+}
+
+/* END FORM */
+
+/* INPUTS & TEXTAREA */
+
+#contactForm #form textarea {
+	border: 1px solid #ccc;
+	color: #1e1e1e;
+	cursor: pointer;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	height: 120px;
+	line-height: 20px;
+	margin-bottom: 1px;
+	padding: 7px;
+	resize: none;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+}
+
+#contactForm #form input[type="text"] {
+	border: 1px solid #ccc;
+	color: #1e1e1e;
+	cursor: pointer;
+	height: 45px;
+	font-family: inherit;
+	font-size: 14px;
+	outline: none;
+	padding: 0 0 0 41px;
+	width: 100%;
+	box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+}
+
+#contactForm #form input[type="checkbox"] {
+	visibility: hidden;
+}
+
+#contactForm #form input[type="checkbox"] ~ .approve span{
+	border: 1px solid #dbdbdb;
+	border-radius: 2px;
+	cursor: pointer;
+    display: inline-block;
+    height: 18px;
+	left: 10px;
+	position: absolute;
+	width: 18px;
+	box-shadow: inset 0 0 4px #dbdbdb;
+	-moz-box-shadow: inset 0 0 4px #dbdbdb;
+    -webkit-box-shadow: inset 0 0 4px #dbdbdb;
+}
+
+#contactForm #form input[type="checkbox"]:checked ~ .approve span {
+	background: url(../img/check.png) no-repeat;
+	background-position: 2px;
+	background-size: 13px 11px;
+}
+
+#contactForm #form textarea:focus,
+#contactForm #form input[type="text"]:focus {
+	border: 1px solid #00cc66;
+	cursor: text;
+	outline: none;
+	position: relative;
+	z-index: 1;
+}
+
+/* END INPUTS & TEXTAREA */
+
+/* VALIDATION */
+
+#contactForm #form input[type="text"].error:focus {
+	border-color: #e52b2b;
+}
+
+#contactForm #form label.error {
+	color:#e52b2b;
+	display: block;
+	font-size: 12px;
+	padding: 5px 0;
+}
+
+#contactForm #form input[type="text"].error {
+	border:1px solid #e52b2b;
+}
+
+#contactForm #form #mail-error {
+	padding-bottom: 0;
+}
+
+#contactForm #form #approve-error {
+	margin: 4px 0 0 28px;
+	position: absolute;
+}
+
+/* END VALIDATION */
+
+/* PHONEWRAPPER SECTION */
+
+#contactForm  .phoneNumber {
+	background-color: #fff;
+	display: table;
+	height: 60px;
+	margin-bottom: 2px;
+	position: relative;
+	width: 100%;
+}
+
+#contactForm  .phoneNumber img {
+	height: 38px;
+	margin-left: 38px;
+	opacity: 0.15;
+	padding-top: 11px;
+	position: absolute;
+	width: 38px;
+}
+
+#contactForm  .phoneNumber span {
+	display: table-cell;
+	font-size: 18px;
+	font-weight: 600;
+	padding-left: 13px;
+	text-align: center;
+	vertical-align: middle;
+	width: 100%;
+}
+
+#contactForm  .phoneNumberShow {
+	background-color: #fff;
+	height: 60px;
+	position: relative;
+	width: 100%;
+}
+
+#contactForm  .phoneNumberShow .number {
+	display: block;
+	font-size: 18px;
+	font-weight: 600;
+	padding-top: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+#contactForm  .phoneNumberShow .button {
+	background-color: #f5f6fa;
+	border: 0 none;
+	border: 1px solid #edeff5;
+	border-bottom: 1px solid #dbdbdb;
+	border-radius: 4px;
+	cursor: pointer;
+	display: block;
+	height: 44px;
+	left: 10px;
+	position: absolute;
+	top: 7px;
+	width: 278px;
+	box-shadow: inset 0 -3px 3px -3px #dbdbdb;
+	-moz-box-shadow: inset 0 -3px 3px -3px #dbdbdb;
+    -webkit-box-shadow: inset 0 -3px 3px -3px #dbdbdb;
+}
+
+#contactForm  .phoneNumberShow .button span {
+	display: block;
+	font-size: 14px;
+	padding-top: 14px;
+	text-align: center;
+}
+
+#contactForm  .phoneNumberShow .button:hover {
+	background-color: #edeff5;
+}
+
+/* END PHONEWRAPPER SECTION */
+
+/* CONFIRMATION SCREEN */
+
+#contactForm .confirmation {
+	background-color: #fff;
+	display: none;
+	margin-bottom: 18px;
+	padding-top: 29px;
+}
+
+#contactForm .confirmation img {
+	display: block;
+	height: 80px;
+	margin: 0 auto;
+	margin-bottom: 28px;
+	width: 80px;
+}
+
+#contactForm .confirmation .textConfirm {
+	color: #69C139;
+	display: block;
+	font-size: 18px;
+	line-height: 21px;
+	margin-bottom: 22px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#contactForm .confirmation .textConfirm  span {
+	display: block;
+}
+
+#contactForm .confirmation .agent {
+	display: block;
+	font-size: 14px;
+	line-height: 20px;
+	padding-bottom: 99px;
+	text-align: center;
+}
+
+#contactForm .confirmation .agent > span {
+	display: block;
+}
+
+#contactForm .confirmation .agent span span {
+	text-decoration: underline;
+}
+
+#contactForm .confirmation .agent a {
+	color: #0097DF;
+	cursor: pointer;
+	position: relative;
+	text-decoration: none;
+}
+
+#contactForm .confirmation .agent a:before {
+	background-color: #0097DF;
+	bottom: 1px;
+	content: "";
+	height: 1px;
+	position: absolute;
+	visibility: hidden;
+	width: 100%;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.1s ease-in-out 0s;
+	transition: all 0.1s ease-in-out 0s;
+}
+
+#contactForm .confirmation .agent a:hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
+/* END CONFIRMATION SCREEN */
+
+::-webkit-input-placeholder {font-family: initial; font-size: 14px; color: a9a9a9;}
+::-moz-placeholder {font-family: initial; font-size: 14px; color: a9a9a9;} /* firefox 19+ */
+:-ms-input-placeholder {font-family: initial; font-size: 14px; color: a9a9a9;} /* ie */
